@@ -73,6 +73,11 @@ photos and write processed results back to the product gallery.
 Go to WooCommerce -> AutoPhotos and click Disconnect. This revokes the
 WooCommerce REST API key the plugin created.
 
+== Screenshots ==
+
+1. Paste the pairing code you generated on your AutoPhotos account.
+2. Once connected, process product photos from your AutoPhotos panel — or disconnect any time.
+
 == Changelog ==
 
 = 1.0.0 =
