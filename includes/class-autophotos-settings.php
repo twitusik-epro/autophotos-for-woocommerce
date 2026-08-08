@@ -25,16 +25,16 @@ class Autophotos_WC_Settings {
 	public static function add_menu() {
 		add_submenu_page(
 			'woocommerce',
-			__( 'AutoPhotos', 'autophotos-woocommerce' ),
-			__( 'AutoPhotos', 'autophotos-woocommerce' ),
+			__( 'AutoPhotos', 'autophotos-for-woocommerce' ),
+			__( 'AutoPhotos', 'autophotos-for-woocommerce' ),
 			'manage_woocommerce',
-			'autophotos-woocommerce',
+			'autophotos-for-woocommerce',
 			array( __CLASS__, 'render_page' )
 		);
 	}
 
 	public static function enqueue_assets( $hook ) {
-		if ( 'woocommerce_page_autophotos-woocommerce' !== $hook ) {
+		if ( 'woocommerce_page_autophotos-for-woocommerce' !== $hook ) {
 			return;
 		}
 		wp_enqueue_script(
@@ -51,9 +51,9 @@ class Autophotos_WC_Settings {
 				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 				'nonce'   => wp_create_nonce( 'autophotos_wc_nonce' ),
 				'i18n'    => array(
-					'connecting'    => __( 'Connecting…', 'autophotos-woocommerce' ),
-					'disconnecting' => __( 'Disconnecting…', 'autophotos-woocommerce' ),
-					'enterCode'     => __( 'Paste a pairing code first.', 'autophotos-woocommerce' ),
+					'connecting'    => __( 'Connecting…', 'autophotos-for-woocommerce' ),
+					'disconnecting' => __( 'Disconnecting…', 'autophotos-for-woocommerce' ),
+					'enterCode'     => __( 'Paste a pairing code first.', 'autophotos-for-woocommerce' ),
 				),
 			)
 		);
@@ -68,7 +68,7 @@ class Autophotos_WC_Settings {
 		$connected_at = get_option( self::OPTION_CONNECTED_AT, '' );
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'AutoPhotos for WooCommerce', 'autophotos-woocommerce' ); ?></h1>
+			<h1><?php esc_html_e( 'AutoPhotos for WooCommerce', 'autophotos-for-woocommerce' ); ?></h1>
 
 			<?php if ( $connected ) : ?>
 				<div class="notice notice-success inline">
@@ -76,7 +76,7 @@ class Autophotos_WC_Settings {
 						<?php
 						printf(
 							/* translators: %s: connection date/time */
-							esc_html__( 'Connected to AutoPhotos.ai since %s.', 'autophotos-woocommerce' ),
+							esc_html__( 'Connected to AutoPhotos.ai since %s.', 'autophotos-for-woocommerce' ),
 							esc_html( $connected_at )
 						);
 						?>
@@ -85,9 +85,9 @@ class Autophotos_WC_Settings {
 				<p>
 					<?php
 					printf(
-						/* translators: %s: link to the AutoPhotos WooCommerce panel */
 						wp_kses(
-							__( 'Process product photos from your <a href="%s" target="_blank" rel="noopener noreferrer">AutoPhotos panel</a>.', 'autophotos-woocommerce' ),
+							/* translators: %s: link to the AutoPhotos WooCommerce panel */
+							__( 'Process product photos from your <a href="%s" target="_blank" rel="noopener noreferrer">AutoPhotos panel</a>.', 'autophotos-for-woocommerce' ),
 							array( 'a' => array( 'href' => array(), 'target' => array(), 'rel' => array() ) )
 						),
 						esc_url( trailingslashit( autophotos_wc_api_base() ) . 'integrations/woocommerce/' )
@@ -96,16 +96,16 @@ class Autophotos_WC_Settings {
 				</p>
 				<p>
 					<button type="button" class="button" id="autophotos-wc-disconnect">
-						<?php esc_html_e( 'Disconnect', 'autophotos-woocommerce' ); ?>
+						<?php esc_html_e( 'Disconnect', 'autophotos-for-woocommerce' ); ?>
 					</button>
 				</p>
 			<?php else : ?>
 				<p>
 					<?php
 					printf(
-						/* translators: %s: link to the AutoPhotos WooCommerce panel */
 						wp_kses(
-							__( 'Generate a pairing code on your <a href="%s" target="_blank" rel="noopener noreferrer">AutoPhotos account</a> and paste it below to connect this store — no need to create WooCommerce REST API keys by hand.', 'autophotos-woocommerce' ),
+							/* translators: %s: link to the AutoPhotos WooCommerce panel */
+							__( 'Generate a pairing code on your <a href="%s" target="_blank" rel="noopener noreferrer">AutoPhotos account</a> and paste it below to connect this store — no need to create WooCommerce REST API keys by hand.', 'autophotos-for-woocommerce' ),
 							array( 'a' => array( 'href' => array(), 'target' => array(), 'rel' => array() ) )
 						),
 						esc_url( trailingslashit( autophotos_wc_api_base() ) . 'integrations/woocommerce/' )
@@ -115,7 +115,7 @@ class Autophotos_WC_Settings {
 				<table class="form-table" role="presentation">
 					<tr>
 						<th scope="row">
-							<label for="autophotos-wc-code"><?php esc_html_e( 'Pairing code', 'autophotos-woocommerce' ); ?></label>
+							<label for="autophotos-wc-code"><?php esc_html_e( 'Pairing code', 'autophotos-for-woocommerce' ); ?></label>
 						</th>
 						<td>
 							<input type="text" id="autophotos-wc-code" class="regular-text" autocomplete="off" />
@@ -124,7 +124,7 @@ class Autophotos_WC_Settings {
 				</table>
 				<p>
 					<button type="button" class="button button-primary" id="autophotos-wc-connect">
-						<?php esc_html_e( 'Connect', 'autophotos-woocommerce' ); ?>
+						<?php esc_html_e( 'Connect', 'autophotos-for-woocommerce' ); ?>
 					</button>
 				</p>
 			<?php endif; ?>

@@ -11,11 +11,12 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 // skipped if WooCommerce's table is already gone (e.g. WooCommerce was
 // removed first).
 global $wpdb;
-$key_id = get_option( 'autophotos_wc_key_id' );
-if ( $key_id ) {
-	$table = $wpdb->prefix . 'woocommerce_api_keys';
-	if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) ) === $table ) {
-		$wpdb->delete( $table, array( 'key_id' => (int) $key_id ) );
+$autophotos_key_id = get_option( 'autophotos_wc_key_id' );
+if ( $autophotos_key_id ) {
+	$autophotos_wc_keys_table = $wpdb->prefix . 'woocommerce_api_keys';
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- one-off cleanup as the plugin is being deleted; no wpdb helper covers "does this table exist" and caching is pointless for a query that runs once, ever.
+	if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $autophotos_wc_keys_table ) ) === $autophotos_wc_keys_table ) {
+		$wpdb->delete( $autophotos_wc_keys_table, array( 'key_id' => (int) $autophotos_key_id ) );
 	}
 }
 

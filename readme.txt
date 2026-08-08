@@ -1,8 +1,8 @@
 === AutoPhotos for WooCommerce ===
-Contributors: autophotos
+Contributors: autophotosai
 Tags: woocommerce, product photos, image editing, background removal, ai
 Requires at least: 6.0
-Tested up to: 6.6
+Tested up to: 7.0
 Requires PHP: 7.4
 WC requires at least: 7.0
 WC tested up to: 11.0
@@ -10,7 +10,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Connect your store to AutoPhotos.ai in one click to process product photos (background removal, drop shadow, color correction, and more) from your AutoPhotos panel.
+One-click connect your store to your AutoPhotos.ai account to process product photos from the AutoPhotos panel.
 
 == Description ==
 

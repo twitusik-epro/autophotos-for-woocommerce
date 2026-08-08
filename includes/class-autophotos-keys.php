@@ -27,13 +27,14 @@ class Autophotos_WC_Keys {
 		$consumer_key    = 'ck_' . wc_rand_hash();
 		$consumer_secret = 'cs_' . wc_rand_hash();
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- WooCommerce's own REST API key table has no wc_*()/wpdb helper for inserts; this is the exact same write WooCommerce's own "Add key" admin screen performs.
 		$wpdb->insert(
 			$wpdb->prefix . 'woocommerce_api_keys',
 			array(
 				'user_id'         => get_current_user_id(),
 				'description'     => sprintf(
 					/* translators: %s: site date/time the key was created */
-					__( 'AutoPhotos.ai (connected %s)', 'autophotos-woocommerce' ),
+					__( 'AutoPhotos.ai (connected %s)', 'autophotos-for-woocommerce' ),
 					current_time( 'mysql' )
 				),
 				'permissions'     => 'read_write',
@@ -59,6 +60,7 @@ class Autophotos_WC_Keys {
 			return;
 		}
 		global $wpdb;
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- same table/reasoning as create_key_pair() above; a key-revocation write has nothing worth caching.
 		$wpdb->delete(
 			$wpdb->prefix . 'woocommerce_api_keys',
 			array( 'key_id' => (int) $key_id )

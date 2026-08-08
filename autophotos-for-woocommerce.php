@@ -11,7 +11,7 @@
  * Author URI:        https://autophotos.ai/
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       autophotos-woocommerce
+ * Text Domain:       autophotos-for-woocommerce
  *
  * This plugin does not process photos itself — it is a thin bridge that
  * generates a WooCommerce REST API key pair for your store and hands it to
@@ -58,7 +58,7 @@ function autophotos_wc_missing_woocommerce_notice() {
 			<?php
 			esc_html_e(
 				'AutoPhotos for WooCommerce requires WooCommerce to be installed and active.',
-				'autophotos-woocommerce'
+				'autophotos-for-woocommerce'
 			);
 			?>
 		</p>
@@ -89,7 +89,7 @@ function autophotos_wc_activate() {
 		wp_die(
 			esc_html__(
 				'AutoPhotos for WooCommerce requires WooCommerce to be installed and active. The plugin has been deactivated.',
-				'autophotos-woocommerce'
+				'autophotos-for-woocommerce'
 			),
 			'',
 			array( 'back_link' => true )

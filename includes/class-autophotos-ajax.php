@@ -12,7 +12,7 @@ class Autophotos_WC_Ajax {
 
 	private static function check_request() {
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Not allowed.', 'autophotos-woocommerce' ) ), 403 );
+			wp_send_json_error( array( 'message' => __( 'Not allowed.', 'autophotos-for-woocommerce' ) ), 403 );
 		}
 		check_ajax_referer( 'autophotos_wc_nonce', 'nonce' );
 	}
@@ -28,9 +28,10 @@ class Autophotos_WC_Ajax {
 	public static function connect() {
 		self::check_request();
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified one line up, inside check_request() -> check_ajax_referer(); the sniff can't see across the function call.
 		$code = isset( $_POST['code'] ) ? sanitize_text_field( wp_unslash( $_POST['code'] ) ) : '';
 		if ( '' === $code ) {
-			wp_send_json_error( array( 'message' => __( 'Missing pairing code.', 'autophotos-woocommerce' ) ), 400 );
+			wp_send_json_error( array( 'message' => __( 'Missing pairing code.', 'autophotos-for-woocommerce' ) ), 400 );
 		}
 
 		list( $consumer_key, $consumer_secret, $key_id ) = Autophotos_WC_Keys::create_key_pair();
@@ -64,7 +65,7 @@ class Autophotos_WC_Ajax {
 			$body    = json_decode( wp_remote_retrieve_body( $response ), true );
 			$message = is_array( $body ) && isset( $body['detail'] )
 				? ( is_string( $body['detail'] ) ? $body['detail'] : wp_json_encode( $body['detail'] ) )
-				: __( 'AutoPhotos rejected the pairing request.', 'autophotos-woocommerce' );
+				: __( 'AutoPhotos rejected the pairing request.', 'autophotos-for-woocommerce' );
 			wp_send_json_error( array( 'message' => $message ), $code_status );
 		}
 
