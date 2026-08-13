@@ -7,6 +7,7 @@
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * WC requires at least: 7.0
+ * Requires Plugins:  woocommerce
  * Author:            AutoPhotos.ai
  * Author URI:        https://autophotos.ai/
  * License:           GPL v2 or later

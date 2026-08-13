@@ -73,6 +73,23 @@ photos and write processed results back to the product gallery.
 Go to WooCommerce -> AutoPhotos and click Disconnect. This revokes the
 WooCommerce REST API key the plugin created.
 
+== External services ==
+
+This plugin connects to AutoPhotos.ai, the service that performs the actual
+product photo processing (background removal, drop shadow, color
+correction, and more) and that this plugin acts as a connection bridge for.
+
+It sends data to AutoPhotos.ai only once, when you click "Connect" on the
+plugin's settings page: your store's URL and the WooCommerce REST API key
+(consumer key and secret) the plugin just generated for your store,
+together with the one-time pairing code you pasted in. This links your
+store to your AutoPhotos.ai account so the AutoPhotos panel can read your
+product photos and write processed results back to your product gallery.
+No data is sent automatically or on a schedule — only when you initiate the
+connect action.
+
+This service is provided by AutoPhotos.ai: [Terms of Service](https://autophotos.ai/terms/), [Privacy Policy](https://autophotos.ai/privacy/).
+
 == Screenshots ==
 
 1. Paste the pairing code you generated on your AutoPhotos account.
