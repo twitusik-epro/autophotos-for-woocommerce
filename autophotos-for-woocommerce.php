@@ -3,7 +3,7 @@
  * Plugin Name:       AutoPhotos for WooCommerce
  * Plugin URI:        https://autophotos.ai/integrations/woocommerce/
  * Description:       Connects your store to your AutoPhotos.ai account so you can process product photos (background removal, drop shadow, color correction, and more) from the AutoPhotos panel, with results written straight back to your product gallery.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * WC requires at least: 7.0
@@ -13,6 +13,7 @@
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       autophotos-for-woocommerce
+ * Domain Path:       /languages
  *
  * This plugin does not process photos itself — it is a thin bridge that
  * generates a WooCommerce REST API key pair for your store and hands it to

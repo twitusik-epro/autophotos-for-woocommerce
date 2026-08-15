@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the AutoPhotos for WooCommerce package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AutoPhotos for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-15 19:40+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: autophotos-for-woocommerce.php:61
+msgid ""
+"AutoPhotos for WooCommerce requires WooCommerce to be installed and active."
+msgstr ""
+
+#: autophotos-for-woocommerce.php:92
+msgid ""
+"AutoPhotos for WooCommerce requires WooCommerce to be installed and active. "
+"The plugin has been deactivated."
+msgstr ""
+
+#: includes/class-autophotos-ajax.php:15
+msgid "Not allowed."
+msgstr ""
+
+#: includes/class-autophotos-ajax.php:34
+msgid "Missing pairing code."
+msgstr ""
+
+#: includes/class-autophotos-ajax.php:68
+msgid "AutoPhotos rejected the pairing request."
+msgstr ""
+
+#: includes/class-autophotos-keys.php:37
+#, php-format
+msgid "AutoPhotos.ai (connected %s)"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:28
+#: includes/class-autophotos-settings.php:29
+msgid "AutoPhotos"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:54
+msgid "Connecting…"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:55
+msgid "Disconnecting…"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:56
+msgid "Paste a pairing code first."
+msgstr ""
+
+#: includes/class-autophotos-settings.php:71
+msgid "AutoPhotos for WooCommerce"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:79
+#, php-format
+msgid "Connected to AutoPhotos.ai since %s."
+msgstr ""
+
+#: includes/class-autophotos-settings.php:90
+#, php-format
+msgid ""
+"Process product photos from your <a href=\"%s\" target=\"_blank\" rel="
+"\"noopener noreferrer\">AutoPhotos panel</a>."
+msgstr ""
+
+#: includes/class-autophotos-settings.php:99
+msgid "Disconnect"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:108
+#, php-format
+msgid ""
+"Generate a pairing code on your <a href=\"%s\" target=\"_blank\" rel="
+"\"noopener noreferrer\">AutoPhotos account</a> and paste it below to connect "
+"this store — no need to create WooCommerce REST API keys by hand."
+msgstr ""
+
+#: includes/class-autophotos-settings.php:118
+msgid "Pairing code"
+msgstr ""
+
+#: includes/class-autophotos-settings.php:127
+msgid "Connect"
+msgstr ""

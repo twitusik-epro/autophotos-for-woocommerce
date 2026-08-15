@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AutoPhotos for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-15 19:40+0000\n"
+"PO-Revision-Date: 2026-08-15 20:00+0000\n"
+"Last-Translator: AutoPhotos.ai <support@autophotos.ai>\n"
+"Language-Team: Polski\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: manual\n"
+
+msgid "AutoPhotos for WooCommerce requires WooCommerce to be installed and active."
+msgstr "Wtyczka AutoPhotos for WooCommerce wymaga zainstalowanego i aktywnego WooCommerce."
+
+msgid "AutoPhotos for WooCommerce requires WooCommerce to be installed and active. The plugin has been deactivated."
+msgstr "Wtyczka AutoPhotos for WooCommerce wymaga zainstalowanego i aktywnego WooCommerce. Wtyczka została dezaktywowana."
+
+msgid "Not allowed."
+msgstr "Brak uprawnień."
+
+msgid "Missing pairing code."
+msgstr "Brak kodu parowania."
+
+msgid "AutoPhotos rejected the pairing request."
+msgstr "AutoPhotos odrzucił żądanie parowania."
+
+msgid "AutoPhotos.ai (connected %s)"
+msgstr "AutoPhotos.ai (połączono %s)"
+
+msgid "AutoPhotos"
+msgstr "AutoPhotos"
+
+msgid "Connecting…"
+msgstr "Łączenie…"
+
+msgid "Disconnecting…"
+msgstr "Rozłączanie…"
+
+msgid "Paste a pairing code first."
+msgstr "Najpierw wklej kod parowania."
+
+msgid "AutoPhotos for WooCommerce"
+msgstr "AutoPhotos for WooCommerce"
+
+msgid "Connected to AutoPhotos.ai since %s."
+msgstr "Połączono z AutoPhotos.ai od %s."
+
+msgid "Process product photos from your <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">AutoPhotos panel</a>."
+msgstr "Przetwarzaj zdjęcia produktów w <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">panelu AutoPhotos</a>."
+
+msgid "Disconnect"
+msgstr "Rozłącz"
+
+msgid "Generate a pairing code on your <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">AutoPhotos account</a> and paste it below to connect this store — no need to create WooCommerce REST API keys by hand."
+msgstr "Wygeneruj kod parowania na swoim <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">koncie AutoPhotos</a> i wklej go poniżej, aby połączyć ten sklep — bez ręcznego tworzenia kluczy WooCommerce REST API."
+
+msgid "Pairing code"
+msgstr "Kod parowania"
+
+msgid "Connect"
+msgstr "Połącz"
+

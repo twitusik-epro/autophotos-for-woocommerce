@@ -6,7 +6,7 @@ Tested up to: 7.0
 Requires PHP: 7.4
 WC requires at least: 7.0
 WC tested up to: 11.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,9 @@ This service is provided by AutoPhotos.ai: [Terms of Service](https://autophotos
 2. Once connected, process product photos from your AutoPhotos panel — or disconnect any time.
 
 == Changelog ==
+
+= 1.0.1 =
+* Added translations: Dutch, French, German, Italian, Japanese, Polish, Portuguese (Brazil), Spanish.
 
 = 1.0.0 =
 * Initial release: pairing-code connect flow.
