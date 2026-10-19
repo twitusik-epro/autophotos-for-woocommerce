@@ -1,21 +1,31 @@
-=== AutoPhotos for WooCommerce ===
+=== AutoPhotos for WooCommerce – AI Product Photo Editor ===
 Contributors: autophotosai
-Tags: woocommerce, product photos, image editing, background removal, ai
+Tags: background remover, remove background, product photos, product image editor, bulk image editing
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 WC requires at least: 7.0
 WC tested up to: 11.0
-Stable tag: 1.0.1
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-One-click connect your store to your AutoPhotos.ai account to process product photos from the AutoPhotos panel.
+Connect WooCommerce to AutoPhotos.ai to edit product photos — background removal, drop shadows, color correction — saved back to the gallery.
 
 == Description ==
 
-AutoPhotos for WooCommerce is a lightweight bridge between your WooCommerce
-store and your [AutoPhotos.ai](https://autophotos.ai/) account.
+**Service discontinued: AutoPhotos.ai is closing down on 26 October 2026.** After that date this plugin will stop working and can be safely deactivated and deleted. New store connections are no longer accepted. Images already saved to your products are not affected.
+
+AutoPhotos for WooCommerce connects your store to your
+[AutoPhotos.ai](https://autophotos.ai/) account so you can edit product
+photos — background removal, drop shadow, color correction, AI upscaling,
+auto-crop and recoloring — from the AutoPhotos panel, with every result
+written straight back to the matching product's gallery.
+
+The plugin is a lightweight, no-config bridge. It does not process images,
+touch your storefront, or contact any server except during the
+connect/disconnect action — all editing and billing happen in your
+AutoPhotos account, against your own credit balance.
 
 Normally, connecting a store to AutoPhotos means going to WooCommerce ->
 Settings -> Advanced -> REST API, generating a key by hand, and pasting it
@@ -97,8 +107,22 @@ This service is provided by AutoPhotos.ai: [Terms of Service](https://autophotos
 
 == Changelog ==
 
+= 1.0.4 =
+* AutoPhotos.ai is closing down on 26 October 2026 — added a notice in the WordPress admin. No other changes.
+
+= 1.0.3 =
+* Updated plugin name and readme description. No functional changes.
+
+= 1.0.2 =
+* Confirmed compatibility with WordPress 7.1.
+
 = 1.0.1 =
 * Added translations: Dutch, French, German, Italian, Japanese, Polish, Portuguese (Brazil), Spanish.
 
 = 1.0.0 =
 * Initial release: pairing-code connect flow.
+
+== Upgrade Notice ==
+
+= 1.0.4 =
+AutoPhotos.ai is closing down on 26 October 2026; this release only adds a notice about it.

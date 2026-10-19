@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       AutoPhotos for WooCommerce
+ * Plugin Name:       AutoPhotos for WooCommerce – AI Product Photo Editor
  * Plugin URI:        https://autophotos.ai/integrations/woocommerce/
- * Description:       Connects your store to your AutoPhotos.ai account so you can process product photos (background removal, drop shadow, color correction, and more) from the AutoPhotos panel, with results written straight back to your product gallery.
- * Version:           1.0.1
+ * Description:       Connects your store to your AutoPhotos.ai account so you can edit product photos (background removal, drop shadow, color correction, AI upscaling, auto-crop, recoloring) from the AutoPhotos panel, with results written straight back to your product gallery.
+ * Version:           1.0.4
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * WC requires at least: 7.0
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'AUTOPHOTOS_WC_VERSION', '1.0.0' );
+define( 'AUTOPHOTOS_WC_VERSION', '1.0.4' );
 define( 'AUTOPHOTOS_WC_PLUGIN_FILE', __FILE__ );
 define( 'AUTOPHOTOS_WC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -67,6 +67,34 @@ function autophotos_wc_missing_woocommerce_notice() {
 	</div>
 	<?php
 }
+
+/**
+ * The AutoPhotos.ai service shuts down on 26 October 2026, after which this
+ * plugin has nothing left to connect to. Shown on the Dashboard, the Plugins
+ * screen and the plugin's own settings page only.
+ */
+function autophotos_wc_service_closing_notice() {
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+	if ( ! $screen || ! current_user_can( 'manage_woocommerce' ) ) {
+		return;
+	}
+	if ( ! in_array( $screen->id, array( 'dashboard', 'plugins' ), true ) && false === strpos( $screen->id, 'autophotos' ) ) {
+		return;
+	}
+	?>
+	<div class="notice notice-warning is-dismissible">
+		<p>
+			<?php
+			esc_html_e(
+				'AutoPhotos.ai is closing down on 26 October 2026. After that date this plugin will stop working and you can safely deactivate and delete it. Images already saved to your products are not affected.',
+				'autophotos-for-woocommerce'
+			);
+			?>
+		</p>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', 'autophotos_wc_service_closing_notice' );
 
 function autophotos_wc_init() {
 	if ( ! class_exists( 'WooCommerce' ) ) {
